@@ -33,7 +33,7 @@ router.post('/archivos', upload.array('archivos', 5), (req, res, next) => {
         return next()
     } else {
         const html = generarHtmlArchivos(files);
-        res.send(html);
+        res.json(html);
     }
 })
 
